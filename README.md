@@ -22,6 +22,7 @@ Este projeto tem como objetivo criar um sistema de monitoramento de hardware par
 - **Git & GitHub**
 - **Amazon EC2**
 - **Visual Studio Code**
+- **IntelliJ IDEA**
 - **MySQL Workbench 8.0 CE**
 
 ---
