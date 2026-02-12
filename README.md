@@ -5,7 +5,7 @@ Este projeto tem como objetivo criar um sistema de monitoramento de hardware par
 
 ---
 
-## 💻 Tecnologias Utilizadas
+## 🌐 Tecnologias Utilizadas
 
 - **HTML5**
 - **CSS3**
