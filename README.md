@@ -68,15 +68,15 @@ npm start
 - **📘 SPTech School**
 - **🔗 GitHub:** https://github.com/LeticiaPinheirooo/
 
-### Marcos Hiroshy
+### Marcos Hiroshi
 - **📘 SPTech School**
 - **🔗 GitHub:** https://github.com/Mahiryo
 
-- ### Pedro Lemos
+### Pedro Augusto
 - **📘 SPTech School**
 - **🔗 GitHub:** https://github.com/pedro-augusto-lemos-rodrigues
   
-- ### Pedro de Oliveira
+### Pedro de Oliveira
 - **📘 SPTech School**
 - **🔗 GitHub:** https://github.com/PedroHenriqueCCOK
 
