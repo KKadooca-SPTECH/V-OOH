@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitalis | LOGIN</title>
+  <script src="./js/sessao.js"></script>
+  <!-- <link rel="stylesheet" href="assets/style/style.css" /> -->
+  <!-- <link rel="icon" href="assets/icon/icon_leaf.png" /> -->
+  <link rel="preconnect" href="" />
+</head>
+
+<body>
+<a href="login.html">LOGIN</a>
+<br>
+<a href="cadastro.html">CADASTRO</a>
+<br>
+<input type="text" id="ipt_email" placeholder="Digite seu email ou nome de usuario"/>
+<br>
+<br>
+<input type="password" id="ipt_senha" placeholder="Digite sua senha"/>
+<br>
+<br>
+<button onclick="entrar()" class="botao-login">LOGAR</button>
+
+<div class="mensagem">
+  Você ainda não possui uma conta? Cadastre-se
+  <a href="cadastro.html"><b>Aqui</b></a>
+</div>
+
+</body>
+
+</html>
+
+<script>
+
+
+  function entrar() {
+
+    var emailVar = ipt_email.value;
+    var senhaVar = ipt_senha.value;
+
+    console.log("FORM LOGIN: ", emailVar);
+    console.log("FORM SENHA: ", senhaVar);
+
+    fetch("/usuarios/autenticar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+      }),
+    }) 
+      .then(function (resposta) {
+        if (resposta.ok) {
+          resposta.json().then((json) => {
+            sessionStorage.EMAIL_USUARIO = json.email;
+            sessionStorage.USERNAME = json.username;
+            sessionStorage.NOME_COMPLETO = json.nome_completo
+          });
+          
+        } else {
+          console.log("Houve um erro ao tentar realizar o login!");
+          alert("Houve um erro ao tentar realizar o login!");
+
+          resposta.text().then((texto) => {
+            console.error(texto);
+            
+          });
+        }
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      });
+
+    return false;
+  }
+</script>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitalis | CADASTRO</title>
+    <script src="./js/sessao.js"></script>
+    <!-- <link rel="stylesheet" href="assets/style/style.css" /> -->
+    <!-- <link rel="icon" href="assets/icon/icon_leaf.png" /> -->
+    <link rel="preconnect" href="" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+        <a href="cadastro.html">CADASTRO</a>
+        <br><br>
+        <a href="login.html">LOGIN</a>
+      </div>
+    </div>
+
+
+    <input
+      type="text"
+      id="ipt_username"
+      placeholder="Insira seu nome de usuario"
+    />
+    <br><br>
+    <input
+      type="text"
+      id="ipt_nome_completo"
+      placeholder="Insira seu nome completo"
+    />
+    <br><br>
+    <input type="text" id="ipt_email" placeholder="Digite o email" />
+    <br><br>
+    
+    <input id="ipt_senha" placeholder="Digite a senha" type="password" />
+    <br><br>
+    
+    <input
+    id="ipt_confirmacao"
+    placeholder="Confirme a senha"
+    type="password"
+    />
+
+    <br><br>
+
+    <button onclick="cadastrar()" class="botao-cadastro">CADASTRAR</button>
+
+    <div class="mensagem">
+      Você já possui uma conta? Logue <a href="login.html"><b>Aqui</b></a>
+    </div>
+  </body>
+</html>
+
+<script>
+  function logout() {
+    sessionStorage.clear();
+    window.location = "index.html";
+  }
+
+  function cadastrar() {
+
+    var usernameVar = ipt_username.value;
+    var nomeCompletoVar = ipt_nome_completo.value;
+    var emailVar = ipt_email.value;
+    var senhaVar = ipt_senha.value;
+    var confirmacaoSenhaVar = ipt_confirmacao.value;
+
+    var senhaMaiuscula = senhaVar.toUpperCase();
+    var incluiMaiuscula = senhaVar != senhaMaiuscula; 
+
+
+    var senhaMinuscula = senhaVar.toLowerCase();
+    var incluiMinuscula = senhaVar != senhaMinuscula;
+
+    console.log(usernameVar);
+    if (usernameVar == "" || nomeCompletoVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" ) 
+    {
+      alert("Todos campos devem estar preenchidos");
+      return false;
+    } 
+    else if ( senhaVar.length < 8 || confirmacaoSenhaVar != senhaVar || incluiMaiuscula == false || incluiMinuscula == false) 
+    {
+      alert("Coloque uma senha forte. A senha deve ter 8 ou mais caracteres, 1 letra maiúscula e 1 minúscula.");
+      return false;
+    } 
+    else if (!emailVar.includes("@") ||!emailVar.endsWith(".com"))
+    {
+      alert("O email deve incluir '@' e finalizar com '.com'");
+      return false;
+    }
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        usernameServer: usernameVar,
+        nomeCompletoServer: nomeCompletoVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+        if (resposta.ok) 
+        {
+          setTimeout(() => {window.location = "login.html";} , "1000");
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+
+    return false;
+  }
+</script>

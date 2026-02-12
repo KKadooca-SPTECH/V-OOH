@@ -1,0 +1,1213 @@
+/* style oficial */
+/* header */
+body {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background-color: #fb6717;
+  height: 80px;
+  width: 100%;
+  z-index: 100;
+  position: sticky;
+  top: 0px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 120px;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: -5%;
+  cursor: pointer;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+}
+
+.titulo {
+  color: #fffefe;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  width: 700px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.navbar a {
+  color: white;
+  outline: none;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.navbar .campo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #e54906;
+  height: 38px;
+  width: 130px;
+  border-radius: 50px;
+}
+
+/* ------------------------------------ */
+
+/* CONTEUDO LOGIN */
+.temperatura,
+.umidade {
+  margin: 5px;
+  margin-left: 20px;
+  width: 75%;
+}
+
+.cor-alerta {
+  width: 13%;
+  height: 30%;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.btns-dash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  padding: 0 30% 0 30%;
+}
+
+.graph {
+  width: 70%;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.tituloGraficos {
+  color: rgb(216, 216, 216);
+  display: flex;
+  justify-content: center;
+}
+
+.btn-chart {
+  font-family: "Barlow", "Segoe UI", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  border: 0;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: #e6005a;
+  background-color: white;
+  margin: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-pink {
+  color: white;
+  background-color: #b13f03;
+}
+
+.btn-white {
+  color: #b13f03;
+  background-color: white;
+}
+
+.label-captura {
+  height: 80px;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.display-block {
+  display: block;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* footer */
+
+.footer {
+  background-color: #b13f03;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-top: 10px;
+}
+
+.footer .container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 80px;
+  box-sizing: border-box;
+}
+
+.footer .left_container {
+  width: 35%;
+}
+
+.footer .left_container h4 {
+  font-weight: 400;
+  font-size: 13px;
+  margin: 0;
+  color: white;
+}
+
+.footer .contacts_container {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer .contacts_container img {
+  height: 28px;
+  width: 28px;
+  filter: invert(100%);
+}
+
+.footer .right_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 35%;
+}
+
+.footer .right_container .left {
+  width: 25%;
+}
+
+.footer .right_container .vertical_ruler hr {
+  height: 80px;
+  border: none;
+  border-left: 1px solid white;
+  opacity: 0.5;
+  color: white;
+}
+
+.footer .right_container .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer .right_container h6 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
+  color: white;
+}
+
+.footer .right_container p {
+  font-size: 12px;
+  color: white;
+}
+
+.footer .middle {
+  width: 100%;
+
+  margin-top: 10px;
+}
+
+.footer .page_end {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.footer .page_end p {
+  margin: 0;
+}
+
+/* ---------------------------------------------- */
+
+/* ================================================================= */
+
+/* Aqui começa o css da calculadora */
+
+.bannerCalculadora {
+  background-image: url(../img/castanhas-para-venda-calculadora.jpg);
+  width: 100%;
+  height: 480px;
+  background-size: cover;
+}
+
+.pagCalculadora {
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #df8657;
+  color: white;
+  border-radius: 30px;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  height: 200px;
+  width: 85%;
+  margin-top: 15px;
+  margin-inline-start: 80px;
+  text-align: center;
+}
+
+.containerCalculo {
+  display: flex;
+  flex-direction: column;
+  background-color: #df8657;
+  color: white;
+  border-radius: 30px;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  height: 80%;
+  width: 50%;
+  margin-top: 15px;
+  margin-inline-start: 80px;
+  padding: 30px 30px 30px 100px;
+  z-index: 99;
+}
+
+.containerCalculo2 {
+  display: flex;
+  flex-direction: column;
+  background-color: #df8657;
+  color: white;
+  border-radius: 30px;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  height: 60%;
+  width: 50%;
+  margin-top: 15px;
+  margin-inline-start: 80px;
+  padding: 30px 30px 60px 100px;
+  z-index: 99;
+}
+
+.containerTexto .paragrafo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.titulo {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+.inputCalculadora {
+  border: none;
+  width: 60%;
+  height: 24px;
+  border-radius: 5px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.conteudo {
+  font-weight: bold;
+  align-content: flex-start;
+  font-size: 20px;
+}
+
+.botaoCalcular {
+  text-align: center;
+  background-color: #e54906;
+  border: none;
+  font-size: 16px;
+  border-radius: 16px;
+  color: white;
+  font-weight: bold;
+  margin-top: 16px;
+  width: 100px;
+  padding: 10px;
+}
+
+.containerPai {
+  display: flex;
+}
+
+.imgInput1 {
+  background-image: url(../img/plantar-calculadora.jpg);
+  display: flex;
+  width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  background-size: 100%;
+  background-position: center;
+  margin-left: 42%;
+  z-index: 99;
+  position: absolute;
+}
+
+.imgInput2 {
+  background-image: url(../img/colhe-castanhas-calculadora.jpg);
+  display: flex;
+  width: 400px;
+  height: 200px;
+  border-radius: 15px;
+  background-size: 99.8%;
+  background-position: center;
+  margin-left: 42%;
+  z-index: 99;
+  position: absolute;
+}
+
+/* Aqui começa o CSS do perfil */
+
+.container {
+  color: #e54906;
+  margin-left: 5%;
+}
+
+.secao input {
+  border-radius: 5px;
+  height: 20px;
+  width: 500px;
+  border-radius: 5px;
+  border-color: #fb6717;
+  color: #fb6717;
+}
+
+.secao select {
+  background-color: white;
+  height: 25px;
+  width: 500px;
+  border-radius: 5px;
+  border-color: #fb6717;
+  color: #fb6717;
+}
+
+.secao textarea {
+  background-color: white;
+  height: 100px;
+  width: 500px;
+  border-radius: 5px;
+  border-color: #fb6717;
+  color: #fb6717;
+}
+
+.btn_adicionar {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid #e54906;
+  color: #b13f03;
+  border-radius: 16px;
+  margin-top: 16px;
+  width: 500px;
+  height: 30px;
+}
+
+.buttonSalvar {
+  margin-bottom: 5%;
+  margin-left: 55%;
+  border: none;
+  color: white;
+  background-color: #e54906;
+  border-radius: 16px;
+  margin-top: 16px;
+  width: 500px;
+  height: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ============================ CSS PAGINA_PERFIL =========================== */
+/* ======== ESTILOS GERAIS DO PAINEL PERFIL ======== */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fffaf5;
+  color: #333;
+}
+
+/* ======== CONTAINER PRINCIPAL ======== */
+.container_perfil {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ======== TÍTULOS ======== */
+.titulo_perfil {
+  color: #e9791a;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subtitulo_perfil {
+  color: #1a7f3c;
+  margin-bottom: 10px;
+  border-left: 5px solid #e9791a;
+  padding-left: 10px;
+}
+
+/* ======== SEÇÕES ======== */
+.secao_perfil {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff8f2;
+  border: 1px solid #ffe0c7;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.secao_perfil:hover {
+  background-color: #fff4eb;
+  box-shadow: 0 0 8px rgba(255, 153, 51, 0.15);
+}
+
+/* ======== LABELS E CAMPOS ======== */
+.label_perfil {
+  font-weight: 500;
+  color: #333;
+}
+
+.input_perfil,
+.textarea_perfil,
+.select_perfil {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fff;
+}
+
+.input_perfil:focus,
+.textarea_perfil:focus,
+.select_perfil:focus {
+  border-color: #e9791a;
+  box-shadow: 0 0 5px rgba(233, 121, 26, 0.3);
+}
+
+/* ======== BOTÕES ======== */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn_adicionar_perfil {
+  background-color: #1a7f3c;
+  color: white;
+}
+
+.btn_adicionar_perfil:hover {
+  background-color: #168034;
+  transform: scale(1.03);
+}
+
+.buttonSalvar_perfil {
+  background-color: #e9791a;
+  color: white;
+  width: 100%;
+}
+
+.buttonSalvar_perfil:hover {
+  background-color: #cf6c16;
+  transform: scale(1.02);
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  .container_perfil {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .input_perfil,
+  .textarea_perfil,
+  .select_perfil {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+/* ========================================= style home ========================================= */
+
+.container-index {
+  height: 450px;
+  width: 100%;
+  border: palevioletred;
+}
+
+.container-index img {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+  position: absolute;
+}
+
+.filtro_laranja {
+  background-image: linear-gradient(to right, #fb6717, transparent 70%);
+  width: 100%;
+  height: 450px;
+  z-index: 2;
+  position: absolute;
+}
+
+.div_containerCarrosel-index {
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+  margin-top: -7%;
+  z-index: 3;
+  position: absolute;
+}
+
+.div_containerCarrosel-index img {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+  margin-left: 4%;
+  border-radius: 8px;
+  box-shadow: 9px 8px 20px rgba(0, 0, 0, 0.432);
+}
+
+.titulos-index {
+  margin-top: 5%;
+  margin-left: 10%;
+  z-index: 3;
+  position: absolute;
+  color: white;
+}
+
+.titulos-index button {
+  background-color: #e54906;
+  color: white;
+}
+
+.botoes-index {
+  display: block;
+  margin-top: 5%;
+}
+
+.botoes-index button {
+  margin-right: 40px;
+  padding: 10px;
+}
+
+.botoes-index button:hover {
+  background-color: #e47445;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.486);
+}
+
+.div_sobreVitalis-index {
+  margin-top: 10%;
+  justify-content: center;
+  text-align: center;
+  color: #e54906;
+  background-image: linear-gradient(to right, #fdf0ec);
+  padding: 40px;
+}
+
+.containerSobrenos-index {
+  background-color: #e54906;
+  padding: 90px;
+  max-width: 500px;
+  border-radius: 14px;
+  margin-top: 10%;
+  margin-left: 40%;
+  color: white;
+  z-index: 3;
+}
+
+.containerSobrenos-index img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  position: absolute;
+  z-index: 3;
+  margin-left: -40%;
+  margin-top: -3%;
+  border-radius: 12px;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.205);
+}
+
+.espacamento-index {
+  height: 80px;
+}
+
+/* ===================================== STYLE CADASTRO/LOGIN ================================================ */
+
+.login {
+  width: 100%;
+  height: 100%;
+}
+
+.login .container-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: linear-gradient(
+    to right,
+    #e54906,
+    #fb6717,
+    #ff983f,
+    transparent 80%
+  );
+  z-index: 2;
+  position: absolute;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.card-login {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: 80px;
+  font-size: 30px;
+  padding-left: 10%;
+}
+
+.formulario-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 10%;
+  justify-content: space-around;
+  height: 350px;
+  width: 550px;
+  color: #fffafa;
+}
+
+.campo-login {
+  height: 30%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.campo-login input {
+  background-color: #fffefe;
+  border-style: none;
+  height: 40%;
+  width: 100%;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.botao-login {
+  height: 40px;
+  width: 80%;
+  background-color: #fb6717;
+  color: white;
+  border-radius: 15px;
+  border-style: none;
+  font-weight: bolder;
+}
+
+.mensagem {
+  display: flex;
+  width: 450px;
+  font-size: 20px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 20px;
+}
+
+#div_mensagem {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+#div_mensagem1 {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.mensagem a {
+  padding-left: 5px;
+  color: white;
+  outline: none;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.login img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  z-index: 1;
+  position: absolute;
+  margin-left: 50%;
+  float: right;
+}
+
+/* Aqui termina o login.html */
+
+/* Aqui começa o cadastro.html */
+
+.cadastro {
+  width: 100%;
+  height: 100%;
+}
+
+.cadastro .container-cadastro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: linear-gradient(
+    to right,
+    #e54906,
+    #fb6717,
+    #ff983f,
+    transparent 80%
+  );
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+}
+
+.card-cadastro {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 80px;
+  font-size: 30px;
+  padding-left: 10%;
+}
+
+.formulario-cadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 10%;
+  justify-content: space-around;
+  height: 700px;
+  width: 500px;
+  color: #fffafa;
+}
+
+.campo-cadastro {
+  height: 30%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.campo-cadastro input {
+  background-color: #fffefe;
+  border-style: none;
+  height: 40%;
+  width: 100%;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.campo-cadastro select {
+  background-color: #fffefe;
+  border-style: none;
+  height: 40%;
+  width: 100%;
+  border-radius: 50px;
+  text-align: center;
+  appearance: none;
+}
+
+.cnpj-telefone {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 30%;
+  align-items: center;
+}
+
+.cnpj-telefone .campo-cadastro {
+  height: 100px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.botao-cadastro {
+  height: 50px;
+  width: 90%;
+  background-color: #fb6717;
+  color: white;
+  border-radius: 15px;
+  border-style: none;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.botao-cadastro a {
+  color: white;
+  outline: none;
+  text-decoration: none;
+}
+
+.cadastro img {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  z-index: 1;
+  position: absolute;
+  margin-left: 50%;
+  float: right;
+}
+
+.banner {
+  width: 100%;
+  padding: 60px 100px;
+  background-color: #fff8f4;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.banner h2 {
+  color: #e54906;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.banner p {
+  font-size: 16px;
+  margin: 2px 0;
+  color: #333;
+}
+
+.banner small {
+  font-size: 13px;
+  color: #555;
+}
+
+.header .navbar li img {
+  height: 28px;
+  width: 28px;
+  filter: invert(100%);
+}
+
+canvas {
+  background-color: #fff;
+}
+
+.chart-container {
+  border: 2px solid #f26522;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #fff;
+}
+
+.chart-container h3 {
+  text-align: center;
+  color: #f26522;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.chart-container.green {
+  border-color: #2b8c37;
+}
+
+.chart-container.green h3 {
+  color: #2b8c37;
+  font-size: 15px;
+}
+
+.chart {
+  width: 100%;
+  height: 300px;
+}
+
+.chartjs-tooltip {
+  background-color: rgba(50, 50, 50, 0.8);
+  color: white;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.chart-orange .chartjs-render-monitor {
+  border-color: #f26522 !important;
+}
+
+.chart-green .chartjs-render-monitor {
+  border-color: #2b8c37 !important;
+}
+
+.card-metricas {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  text-align: center;
+  width: 350px;
+  transition: 0.3s;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 22px;
+}
+
+.card_umidadeAcimaOuAbaixo {
+  background: #fadbdb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #d60a0a;
+  padding: 20px;
+  text-align: center;
+  width: 350px;
+  transition: 0.3s;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.card_umidadeAcimaOuAbaixo h2 {
+  color: #d60a0a;
+  font-size: 29px;
+  margin-bottom: 0px;
+}
+
+.card_umidadeFaixaIdeal {
+  background: #88f579;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #145c0ba1;
+  padding: 20px;
+  text-align: center;
+  width: 350px;
+  transition: 0.3s;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.card_umidadeFaixaIdeal h2 {
+  color: #145c0ba1;
+}
+
+.card_umidadeAcimaOuAbaixo:hover {
+  transform: translateY(-5px);
+}
+
+.card_umidadeFaixaIdeal:hover {
+  transform: translateY(-5px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+#div_abaixo {
+  background-color: #ee5252;
+  border: solid 1px #d60a0a;
+  border-radius: 5px;
+  width: 30px;
+  height: 20px;
+}
+
+#div_faixaIdeal {
+  background-color: #88f579;
+  border: solid 1px #145c0ba1;
+  border-radius: 5px;
+  width: 30px;
+  height: 20px;
+}
+
+#div_acima {
+  background-color: #02a4f0;
+  border: solid 1px #2b38ac;
+  border-radius: 5px;
+  width: 30px;
+  height: 20px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  max-width: 400px;
+  margin-left: 33%;
+}
+
+#container-bob {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  object-fit: cover;
+  object-position: center;
+  object-fit: cover;
+  border: 2px solid;
+}
+
+#imgFundo {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  opacity: 15%;
+}
+
+#div_glass {
+  background-color: #ffffff38;
+  width: 75%;
+  height: 350px;
+  margin: 0 auto;
+  display: grid;
+  margin-top: 5%;
+  height: 320px;
+  border-radius: 4px;
+  z-index: 7;
+  color: white;
+  text-shadow: 0px 0px 2px white;
+  border-color: #ffebd7;
+  filter: opacity(100%);
+  padding: 20px;
+  transition: 1s ease;
+  box-shadow: 0px 0px 20px #4421004d;
+  margin-bottom: 15%;
+}
+
+#div_glass h1 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+  color: #333;
+}
+
+#div_glass:hover {
+  scale: 101%;
+  transform: translateZ(10px);
+  box-shadow: 0px 0px 10px rgba(255, 136, 0, 0.445);
+  border-color: #fcdfc3;
+}
+
+#texteResposta {
+  text-align: center;
+  color: #333;
+}
+
+#subtitulo {
+  text-align: center;
+}
+
+#hr-suporte {
+  width: 70%;
+  border: 2px solid #d60a0a;
+}
+
+#resposta {
+  height: 100px;
+  width: 75%;
+  margin: auto;
+  color: #333;
+  font-size: 32px;
+}
+
+#pergunta {
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+  overflow: hidden;
+  outline: #ff7b00;
+  transition: 1s ease;
+  height: 150px;
+}
+
+#pergunta:focus {
+  outline-color: #fcdfc3;
+  overflow: auto;
+}
+
+button {
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff7b00;
+  color: #ffffff;
+  text-shadow: 0px 0px 1px greenyellow;
+}
+
+h1 {
+  text-align: center;
+}
+
+.buttonSuporte {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
